@@ -1,18 +1,18 @@
 
-img {
+.indexImg {
     border-radius: 50%;
     width: 35vh;
-    height: 29vh;
 }
+
 .icone {
     width: 40px;
-    height: 40px;
+
 }
 #demail, #networks {
     text-align: center;
 }
 
-body {
+#indexbody {
     padding: 2vh;
     max-width: 30em;
     margin: auto;
@@ -27,7 +27,7 @@ p {
 }
 
 
-ul {
+.indexUl {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -35,7 +35,62 @@ ul {
     padding: 0;
 }
 
-li {
+.indexLi {
     padding: 1rem;
 }
 
+.articleSection {
+    max-width: 38em;
+    margin: auto;
+    padding: 1em;
+}
+
+.articlePre {
+    background-color: black;
+    color: limegreen;
+    padding: 1em;
+    overflow: auto;
+}
+
+.articleCode {
+    background-color: black;
+    color: limegreen;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.articlebody {
+    padding-bottom: 30em;
+}
+
+.articleHeader{
+    display: flex;
+    position: static;
+    float: none;
+    box-sizing: border-box;
+    color: #0F1111;
+    font-size: 14px;
+    }
+
+.articleImg {
+    border-radius: 75%;
+    border-style: wave;
+    width: 10vh;
+}
+
+.articleUlNavLeft {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 10px; /* Remove margins */
+    flex-direction: row;
+}
+
+.articleNavLeft {
+
+    display: flex;
+    position: fixed;
+    float: none;
+    height: 18vh;
+    font-size: 18px;
+    width: 25%;
+}

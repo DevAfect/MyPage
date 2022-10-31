@@ -1,57 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Como funciona a WEB?</title>
-  <style>
-    section {
-      max-width: 38em;
-      margin: auto;
-      padding: 1em;
-    }
-
-    pre {
-      background-color: black;
-      color: limegreen;
-      padding: 1em;
-      overflow: auto;
-    }
-
-    details {
-      background-color: lightgoldenrodyellow;
-      padding: 1em;
-      border-radius: 1em;
-    }
-
-    code {
-      background-color: black;
-      color: limegreen;
-      padding-left: 0.3em;
-      padding-right: 0.3em;
-    }
-
-    body {
-      padding-bottom: 30em;
-    }
-  </style>
+  <link href="/style.css/" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <!-- Escreva seu código a partir daqui -->
-  <header>
-    <nav style=" padding: 2vh;
-    max-width: 30em;
-    margin: auto;
-    text-align: center;">
-      <a href="/index.html"><img class="back"> Voltar </a>
+  <header class ="articleHeader">
+    <nav class="articleNavLeft">
+        <ul class="articleUlNavLeft">
+          <li> <a href="/index.html"> <img class="articleImg"  src="/img/pixelart_library.png" alt="Me in pixel art in the library "> </a> </li>
+          <li> <a href="/index.html"> Voltar </a> </li>
+        </ul>
     </nav>
+
   </header>
-  <section>
+
+  <div class="articleBody">
+  <section class="articleSection">
     <h1> Sobre a web e a estrutura dos sites </h1>
   </section>
-  <section>
+  <section class="articleSection">
     <h2> Como funciona a Web ? </h2>
     <p>Bom, para entender como funciona WEB precisamos pensar na sua estrutura, na internet em si, que na verdade nada
       mais é que um empilhado de computadores e cabos que conectam todo o mundo, seguindo uma teoria bem legal de redes
@@ -64,7 +37,7 @@
       para o navegador e lá são exibidos!</p>
   </section>
 
-  <section>
+  <section class="articleSection">
     <h3> Mas como um computador pede e recebe uma página? </h3>
     <p>Para pedir uma página o cliente do computador segue o Protocolo de Transferência de Hipertexto (HTTP) e isso
       serve como base para toda comunicação, os métodos de solicitação são:</p>
@@ -101,7 +74,7 @@
       cliente envia uma mensagem de requisição e o servidor envia uma mensagem de resposta ao cliente com aquilo que foi
       pedido.</p>
     <p>Um navegador pedindo dados de um servidor local, seria algo como:</p>
-    <pre>
+    <pre class="articlePre">
 GET / HTTP/1.1
 Host: localhost:8080
 Connection: keep-alive
@@ -123,7 +96,7 @@ Accept-Language: pt-BR,pt;q=0.9,en;q=0.8,en-US;q=0.7
       </pre>
     <p> Os navegadores usuais (chrome, firefox, edge) são clientes muito complexos e carregam em si uma arquitetura
       gigantesca, analisando o pedido de um cliente menos complexo, o curl, podemos ver a seguinte resposta: </p>
-    <pre>
+    <pre class="articlePre">
 GET / HTTP/1.1
 Host: localhost:8080
 User-Agent: curl/7.83.1
@@ -139,7 +112,7 @@ Accept: */*
     E dois espaços em branco.<br>
     <p> Fazendo um pedido a URL, utilizando o curl https://www.infnet.edu.br/infnet/home/ temos o seguinte como resposta
     </p>
-    <pre>
+    <pre class="articlePre">
 HTTP/1.1 301 Moved Permanently
 Server: nginx
 Date: Sun, 30 Oct 2022 01:25:29 GMT
@@ -151,7 +124,7 @@ Location: https://www.infnet.edu.br/infnet/home/
     <p> Podemos ver que na resposta o servidor envia muitas coisas, entre elas podemos notar o "Content-Type" e ali
       temos o conteúdo da página que é renderizada no navegador!</p>
   </section>
-  <section>
+  <section class="articleSection">
     <h3> Mas como o computador fala com a internet ?</h3>
     <p> Para isso precisamos entender como funciona o "Domain Name System" (DNS), que funciona como a lista telefônica
       da internet, é com isso que ela sabe como procurar o endereço de um site, ela traduz o "www.xablau.com" em uma
@@ -159,19 +132,19 @@ Location: https://www.infnet.edu.br/infnet/home/
     <p>Para fazer o caminho existe toda uma estrutura hierarquica e distribuída com raizes que tem suas proprias zonas
       que fazem tudo isso funcionar, mas eu escrevo sobre isso quanto tiver mais tempo.</p>
   </section>
-  <section>
+  <section class="articleSection">
     <h1> O que é uma Página WEB? </h1>
     <p> Uma página web é uma coisa linda, é uma estrutura criada com base em uma Linguagem de Marcação de Hipertexto no
       caso o HTML, que possibilita aos navegadores lerem estas marcações e traduzirem o que foi indicado, manipulando
       texto, imagem, links e varios outros conteúdos que são exibidos na página.</p>
   </section>
-  <section>
+  <section class="articleSection">
     <h1> Qual a função da linguagem HTML e CSS na página WEB ?</h1>
     <p> O HTML é a linaguem de marcação com base em tags que faz as indicações do que deve ser feito em cada parte da
       página, enquanto o CSS (Cascading Style Sheets ou Folhas de Estilo em Cascata) é o arquivo de estilização das tags
       da página, nele é descrito como vai ser apresentado de cada o conteúdo das tags </p>
   </section>
-  <section>
+  <section class="articleSection">
     <h1> O que é o ambiente de programação para desenvolver HTML/CSS ?</h1>
     <p>Em geral são softwares ou serviços web que permitem a integração de diversas ferramentas para programar um site!
       São facilitadores que economizam o tempo dos programadores, fornecendo diversas ferramentas que agilizam o
@@ -179,13 +152,6 @@ Location: https://www.infnet.edu.br/infnet/home/
 
   </section>
 
-  <!-- Não modifique depois dessa linha-->
-  <script src="script.js"></script>
-
-  <!--
-This script places a badge on your repl's full-browser view back to your repl's cover page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue, blurple, magenta, pink!
--->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+  </div>
 </body>
-
 </html>
